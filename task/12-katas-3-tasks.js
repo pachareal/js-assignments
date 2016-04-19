@@ -92,7 +92,7 @@ function UrlShortener() {
 UrlShortener.prototype = {
 
     encode: function(url) {
-        throw new Error('Not implemented');
+        return url.replace(/(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/|www\.)/, '').split('.')[0];
     },
     
     decode: function(code) {
